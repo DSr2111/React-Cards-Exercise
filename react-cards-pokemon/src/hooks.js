@@ -23,4 +23,8 @@ function useAxios(keyInLS, baseUrl) {
     const response = await axios.get(`${baseUrl}${restOfUrl}`);
     setResponses((data) => [...data, formatter(response.data)]);
   };
+
+  const clearResponses = () => setResponses([]);
+
+  return [responses, addResponseData, clearResponses];
 }
