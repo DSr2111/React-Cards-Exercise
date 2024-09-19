@@ -1,0 +1,10 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+
+function useFlip(initialFlipState = true) {
+  const [isFlipped, setFlipped] = useState(initialFlipState);
+
+  const flip = () => {
+    setFlipped((isUp) => !isUp);
+  };
+}
