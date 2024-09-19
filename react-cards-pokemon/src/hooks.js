@@ -7,4 +7,8 @@ function useFlip(initialFlipState = true) {
   const flip = () => {
     setFlipped((isUp) => !isUp);
   };
+
+  return [isFlipped, flip];
 }
+
+export { useFlip };
